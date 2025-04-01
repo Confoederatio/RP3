@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Combat Engine</title>
+		<meta charset = "utf-8">
+		<style type = "text/css">
+			html,head,body {
+				font-family: sans-serif;
+				font-size: 18px;
+			}
+			
+			input {
+				margin-top: 2px;
+				width: 200px;
+			}
+			
+			div {
+				margin-top: 7px;
+			}
+			
+			button {
+				padding-bottom: 5px;
+				padding-top: 5px;
+				padding-left: 10px;
+				padding-right: 10px;
+				font-size: 20px;
+				margin-top: 2px;
+			}
+		</style>
+	</head>
+	<body>
+		<input id = "battle-name" type = "text"> Battle Name
+		<br>
+		<h2 id = "army1-name">Attacker:</h2>
+		<div id = "armies-1">
+		</div>
+		<div id = "army1-display">0 AP ¦ 0 DP</div>
+		<br>
+		<h2 id = "army2-name">Defender:</h2>
+		<div id = "armies-2">
+		</div>
+		<div id = "army2-display">0 AP ¦ 0 DP</div>
+		<br><br>
+		<button onclick = "attackerAPRoll();">Attacker AP Roll</button><br>
+		<button onclick = "defenderAPRoll();">Defender AP Roll</button><br><br>
+		<h2>Battle Situation:</h2>
+		<div id = "battle-situation" style = "font-family: monospace;">
+		</div>
+		<br>
+		<br>
+		<h2>Current Log:</h2>
+		<div id = "current-log" style = "font-family: monospace;">
+		</div>
+		<br><br>
+		<button onclick = "clearLog();">Clear Log</button>
+		<script type = "text/javascript">
+			var log = [];
+			//Regular functions
+			{
+				function randomNumber(min, max) {  
+					return Math.floor(Math.random() * (max - min) + min); 
+				}
+				function parseNumber (number) {
+					return new Intl.NumberFormat('de', {style: 'decimal'}).format(number);
+				}
+			}
+			
+			var config = {
+				units: ["Franc-tireurs","Arquebusiers","Musketmen","Riflemen","Infantry","Modern Infantry","Bombard","Cannons","Culverins","Field Artillery","Howitzers","Armoured Cars","Tanks","Biplanes","Bombers","Fighters","Strategic Bombers","Galleons","Men-of-War","Ironclads","Dreadnoughts","Battleships"],
+				
+				ap_list: [1, 1, 2, 5, 6, 10, 1000, 1500, 2500, 10000, 15000, 3000, 10000, 2000, 5000, 1000, 25000, 1000, 2500, 7000, 10000, 20000],
+				dp_list: [1, 1, 2, 5, 8, 10, 300, 300, 500, 200, 500, 6000, 20000, 2000, 1000, 10000, 5000, 1000, 2500, 5000, 20000, 10000]
+			};
+			
+			var selection_html1 = [];
+			var selection_html2 = [];
+			
+			selection_html1.push("<input type = 'text' id = 'army1-name-field'> Army Name");
+			selection_html1.push("");
+			
+			for (var i = 0; i < config.units.length; i++) {
+				selection_html1.push("<input type = 'number' class = 'armies1-" + config.units[i] + "' id = 'armies1-selection-" + i + "'> " + config.units[i]);
+			}
+			
+			selection_html2.push("<input type = 'text' id = 'army2-name-field'> Army Name");
+			selection_html2.push("");
+			for (var i = 0; i < config.units.length; i++) {
+				selection_html2.push("<input type = 'number' class = 'armies2-" + config.units[i] + "' id = 'armies2-selection-" + i + "'> " + config.units[i]);
+			}
+			
+			console.log(selection_html1);
+			console.log(selection_html2);
+			
+			document.getElementById("armies-1").innerHTML = selection_html1.join("<br>");
+			document.getElementById("armies-2").innerHTML = selection_html2.join("<br>");
+			
+			for (var i = 0; i < config.units.length; i++) {
+				document.getElementById("armies1-selection-" + i).value = 0;
+				document.getElementById("armies2-selection-" + i).value = 0;
+			}
+			
+			army1_name = "";
+			army1_ap = 0;
+			army1_dp = 0;
+			army1_array = [];
+			army2_name = "";
+			army2_ap = 0;
+			army2_dp = 0;
+			army2_array = [];
+			
+			function calculateApDp () {
+				army1_ap = 0;
+				army1_dp = 0;
+				
+				army2_ap = 0;
+				army2_dp = 0;
+				
+				army1_array = [];
+				army2_array = [];
+				
+				var battle_string = [];
+				
+				for (var i = 0; i < config.units.length; i++) {
+					army1_ap = army1_ap + parseInt(document.getElementById("armies1-selection-" + i).value)*config.ap_list[i];
+					army1_dp = army1_dp + parseInt(document.getElementById("armies1-selection-" + i).value)*config.dp_list[i];
+					army1_array.push(parseInt(document.getElementById("armies1-selection-" + i).value));
+					
+					army2_ap = army2_ap + parseInt(document.getElementById("armies2-selection-" + i).value)*config.ap_list[i];
+					army2_dp = army2_dp + parseInt(document.getElementById("armies2-selection-" + i).value)*config.dp_list[i];
+					army2_array.push(parseInt(document.getElementById("armies2-selection-" + i).value));
+				}
+				
+				army1_name = document.getElementById("army1-name-field").value;
+				army2_name = document.getElementById("army2-name-field").value;
+				
+				document.getElementById("army1-display").innerHTML = parseNumber(army1_ap) + " AP ¦ " + parseNumber(army1_dp) + " DP";
+				document.getElementById("army2-display").innerHTML = parseNumber(army2_ap) + " AP ¦ " + parseNumber(army2_dp) + " DP";
+				
+				if (army1_name != "") {
+					document.getElementById("army1-name").innerHTML = "Attacker (" + army1_name + "):";
+				} else {
+					document.getElementById("army1-name").innerHTML = "Attacker:";
+				}
+				if (army2_name != "") {
+					document.getElementById("army2-name").innerHTML = "Defender (" + army2_name + "):";
+				} else {
+					document.getElementById("army2-name").innerHTML = "Defender:";
+				}
+				
+				battle_string.push("**" + document.getElementById("battle-name").value + ":**");
+				battle_string.push("----------------------------------------");
+				battle_string.push("");
+				battle_string.push("**" + army1_name + ":**");
+				battle_string.push("");
+				for (var i = 0; i < config.units.length; i++) {
+					if (army1_array[i] > 0) {
+						var unit_name = config.units[i];
+						var unit_name_capitalised = unit_name.charAt(0).toUpperCase() + unit_name.slice(1);
+						battle_string.push(parseNumber(army1_array[i]) + " " + unit_name_capitalised);
+					}
+				}
+				battle_string.push("");
+				battle_string.push(parseNumber(army1_ap) + " AP ¦ " + parseNumber(army1_dp) + " DP");
+				battle_string.push("");
+				battle_string.push("---");
+				battle_string.push("");
+				battle_string.push("**" + army2_name + ":**");
+				battle_string.push("");
+				for (var i = 0; i < config.units.length; i++) {
+					if (army2_array[i] > 0) {
+						var unit_name = config.units[i];
+						var unit_name_capitalised = unit_name.charAt(0).toUpperCase() + unit_name.slice(1);
+						battle_string.push(parseNumber(army2_array[i]) + " " + unit_name_capitalised);
+					}
+				}
+				battle_string.push("");
+				battle_string.push(parseNumber(army2_ap) + " AP ¦ " + parseNumber(army2_dp) + " DP");
+				
+				//console.log(battle_string);
+				
+				document.getElementById("battle-situation").innerHTML = battle_string.join("<br>");
+			}
+			
+			function attackerAPRoll () {
+				var current_roll = randomNumber(0, army1_ap);
+				var lost_units = [];
+				log.push(army1_name + " rolled a **" + current_roll + "**.");
+				
+				for (var i = 0; i < config.units.length; i++) {
+					if (army2_array[i] > 0) {
+						if (current_roll > army2_array[i]*config.dp_list[i]) {
+							current_roll = current_roll - army2_array[i]*config.dp_list[i];
+							lost_units.push(parseNumber(army2_array[i]) + " " + config.units[i]);
+							army2_array[i] = 0;
+						} else {
+							army2_array[i] = army2_array[i] - Math.ceil(current_roll/config.dp_list[i]);
+							lost_units.push(parseNumber(Math.ceil(current_roll/config.dp_list[i])) + " " + config.units[i]);
+						}
+					}
+				}
+				
+				console.log("Lost Unit Array: " + lost_units + " were lost.");
+				log.push(lost_units.join(", ") + " were lost.");
+				
+				for (var i = 0; i < config.units.length; i++) {
+					document.getElementById("armies2-selection-" + i).value = army2_array[i];
+				}
+				
+				console.log(army2_array);
+				
+				document.getElementById("current-log").innerHTML = log.join("<br>");
+			}
+			
+			function defenderAPRoll () {
+				var current_roll = randomNumber(0, army2_ap);
+				var lost_units = [];
+				log.push(army2_name + " rolled a **" + current_roll + "**.");
+				
+				for (var i = 0; i < config.units.length; i++) {
+					if (army1_array[i] > 0) {
+						if (current_roll > army1_array[i]*config.dp_list[i]) {
+							current_roll = current_roll - army1_array[i]*config.dp_list[i];
+							lost_units.push(parseNumber(army1_array[i]) + " " + config.units[i]);
+							army1_array[i] = 0;
+						} else {
+							army1_array[i] = army1_array[i] - Math.ceil(current_roll/config.dp_list[i]);
+							lost_units.push(parseNumber(Math.ceil(current_roll/config.dp_list[i])) + " " + config.units[i]);
+						}
+					}
+				}
+				
+				console.log("Lost Unit Array: " + lost_units + " were lost.");
+				log.push(lost_units.join(", ") + " were lost.");
+				
+				for (var i = 0; i < config.units.length; i++) {
+					document.getElementById("armies1-selection-" + i).value = army1_array[i];
+				}
+				
+				console.log(army2_array);
+				
+				document.getElementById("current-log").innerHTML = log.join("<br>");
+			}
+			
+			function clearLog () {
+				log = [];
+				document.getElementById("current-log").innerHTML = "";
+			}
+			
+			//Regular Logic
+			{
+				setInterval(function(){
+					calculateApDp();
+				},100);
+			}
+		</script>
+	</body>
+</html>
