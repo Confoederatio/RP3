@@ -1,0 +1,32 @@
+**Casus Belli:**
+------------------ 
+Notice: Status Quo includes war reparations.
+
+:map: **Territorial Violation: **
+```css
+- Requirement: Target has moved armed forces through your country without permission.
+- Peace Demands: Status Quo.
+- Infamy: 0.
+```
+
+:moneybag: **Theft: **
+```css
+- Requirement: Target scammed/blockaded you, etc.
+- Peace Demands: War Reparations.
+- Infamy: 0.
+```
+
+:ship: **Containment: **
+```css
+- Requirement: Target has over 8 infamy.
+- Peace Demands: Install democracy/HM Government, Cut down to size.
+- Infamy: 0.
+```
+
+:shield: **Protection: **
+```css
+- Requirement: Target attacked a nation that the attacker guaranteed the independence of.
+- Peace Demands: Status Quo.
+- Infamy: 0.
+```
+------------------

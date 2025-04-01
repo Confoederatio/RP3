@@ -1,0 +1,55 @@
+:guard: **Colonial Integration: **
+```css
+- Requirement: Attacker's total AP are over 4x that of their target's. Target is behind on tech.
+- Peace Demands: Puppet, annex.
+- Infamy: 2.
+```
+
+:statue_of_liberty: **Free Oppressed People: **
+```css
+- Requirement: Attacker is a democracy/HM Government, target is not. Target has over 3 infamy.
+- Peace Demands: Install democracy/HM Government.
+- Infamy: 2.
+```
+
+:bell: **Independence: **
+```css
+- Requirement: The attacker has been a puppet for more than 5 years to the target.
+- Peace Demands: Liberation.
+- Infamy: 2.
+```
+
+:japan: **Revanchism: **
+```css
+- Requirement: Target occupies land once controlled by the attacker.
+- Peace Demands: Retake Cores.
+- Infamy: 2.
+```
+
+:scroll: **Anschluss: **
+```css
+- Requirement: Target is your puppet, and refused to be annexed by you.
+- Peace Demands: Annexation.
+- Infamy: 3.
+```
+
+:speaking_head: **Diplomatic Insult: **
+```css
+- Requirement: Target has formally insulted the attacker.
+- Peace Demands: Status Quo.
+- Infamy: 5.
+```
+
+:fist_tone1: **Lebensraum: **
+```css
+- Requirement: Attacker is communist, fascist, or absolute monarchy.
+- Peace Demands: Puppet, annexation.
+- Infamy: 5.
+```
+
+:park: **Acquire State: **
+```css
+- Requirement: Attacker borders target. Attacker's total AP are over twice that of target's.
+- Peace Demands: Puppet, annexation.
+- Infamy: 5.
+```

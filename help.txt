@@ -1,0 +1,46 @@
+**Help:**
+---------------oOo-----oOo---------------
+Midnighter RP:
+---------------oOo-----oOo---------------
+
+```
+@help - Show this information page.
+@roll [min] <max> or @roll [max] - Roll the dice.
+```
+
+**Country commands:**
+
+```
+@nextround - See how long it is until the next round.
+@governments - Fetch a list of all governments.
+
+@found <name> - Found your country.
+@set-motto <motto> - Change your nation's motto.
+@government [list¦government_type] - Change your government.
+@inv [user] - Check someone's inventory.
+@industry [user] - Check someone's industry.
+@stats [user] - Check someone's stats.
+@politics [user] - Check someone's government.
+@stab [user] - Check someone's stability.
+
+@settax [int] - Set your tax.
+
+@build <building> [number] - Build some buildings! (See `build list`).
+@craft <object> [number] - Craft something. (See `craft list`).
+@mine [number] - Go mining.
+@forage [number] - Chop down some wood.
+@settle <Prov ID> <...>
+
+@give <user> <number> <item> - Give someone some items.
+@industrygive <user> <number> <building> - Give someone your industry.
+@militarygive <user> <number> <item> - Give someone your military units.
+
+@disband <number> <unit> - Disband units.
+@demolish <number> <building> - Demolish a building.
+
+@coup - Coup your government to be more progressive.
+@overthrow - Overthrow your government.
+
+@vote - For democratic governments when they want to go to war.
+```
+

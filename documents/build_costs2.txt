@@ -1,0 +1,4 @@
+:factory: **artillery_factories** - 7 Iron, 5 Lead, 5 Stone, £7.500, 25.000 Manpower ¦ Enables Artillery Recruitment ¦ Starting building
+:articulated_lorry: **auto_plants** - 15 Iron, 20 Stone, 10 Petrol, £15.000, 100.000 Manpower ¦ Enables Tank Recruitment ¦ (Requires Tech 4)
+:airplane: **aeroports** - 20 Stone, 10 Wood, 25 Iron, 5 Petrol, £20.000, 50.000 Manpower ¦ Enables Aerial Recruitment ¦ (Requires Tech 4)
+:anchor: **dockyards** - 15 Wood, 5 Iron, 5 Stone, £5.000, 100.000 Manpower ¦ Enables Naval Recruitment ¦ Starting building

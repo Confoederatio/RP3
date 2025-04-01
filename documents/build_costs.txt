@@ -1,0 +1,25 @@
+**Raw Production Facilities:**
+------------------
+:pick: **coal_mines** - 5 Wood, 5 Iron, 10 Stone, £5.000, 20.000 Manpower ¦ Produces 3 Coal per turn ¦ (Requires Tech 2)
+:pick: **gold_mines** - 5 Wood, 10 Iron, 20 Stone, £10.000, 50.000 Manpower ¦ Produces 1 Gold per turn ¦ (Requires Tech 2)
+:pick: **iron_mines** - 10 Wood, 5 Iron, 15 Stone, £5.000, 20.000 Manpower ¦ Produces 3 Iron per turn ¦ (Requires Tech 2)
+:pick: **lead_mines** - 5 Wood, 5 Iron, 10 Stone, £5.000, 20.000 Manpower ¦ Produces 3 Lead per turn ¦ (Requires Tech 2)
+:mountain_snow: **quarries** - 2 Wood, 3 Iron, £2.500, 20.000 Manpower ¦ Produces 5 Stone per turn ¦ Starting building
+
+:leafy_green: **farms** - 2 Wood, 1 Iron, £1.000, 25.000 Manpower ¦ Produces 3 Food per turn ¦ Starting building
+:axe: **lumberjacks** - 2 Wood, 3 Iron, £2.500, 10.000 Manpower ¦ Produces 5 Wood per turn ¦ Starting building
+:hammer_pick: **refineries** - 10 Iron, 5 Coal, £10.000, 50.000 Manpower ¦ Produces 5 Petrol per turn ¦ (Requires Tech 4)
+
+**Action Buildings:**
+------------------
+
+:pick: **mines** - 1 Iron, 2 Wood, 3 Stone, £2.000, 20.000 Manpower ¦ 1 Action per turn ¦ Starting building
+:hammer_pick: **workshops** - 3 Coal, 7 Wood, 15 Stone, £5.000, 50.000 Manpower ¦ 2-3 Actions per turn ¦ (Requires Tech 2)
+:hammer_pick: **watermills** - 15 Wood, 4 Iron, £7.500, 40.000 Manpower ¦ 3-5 Actions per turn ¦ (Requires Tech 3)
+:factory: **factories** - 10 Iron, 5 Coal, 2 Petrol, £10.000, 50.000 Manpower ¦ 5-7 Actions per turn ¦ (Requires Tech 4)
+:factory: **industrial_complexes** - 15 Iron, 15 Coal, 5 Petrol, 10 Wood, £25.000, 70.000 Manpower ¦ 6-10 Actions per turn ¦ (Requires Tech 5)
+
+**Military Buildings:**
+------------------
+
+:guard: **barracks** - 5 Iron, 3 Lead, 10 Stone, £5.000, 20.000 Manpower ¦ Enables Infantry Recruitment ¦ Starting building

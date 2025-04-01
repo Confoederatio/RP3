@@ -1,0 +1,47 @@
+**Governments:**
+------------------ 
+
+:crown: **Absolute Monarchy: **
+```css
+- Capability to declare wars: Yes.
+- Maximum Manpower: 5%.
+- Maximum Tax Rate: 65%.
+- Civilian Actions: 10%.
+- Becomes constitutional monarchy when overthrown.
+```
+
+:classical_building: **Constitutional Monarchy: **
+```css
+- Capability to declare wars by vote only.
+- Maximum Manpower: 20%.
+- Maximum Tax Rate: 35%.
+- Civilian Actions: 35%.
+- Becomes democracy when overthrown.
+```
+
+:hammer_pick: **Communism: **
+```css
+- Capability to declare wars: Yes.
+- Maximum Manpower: 50%.
+- Maximum Tax Rate: 5%.
+- Civilian Actions: 0%.
+- Becomes absolute monarchy when overthrown.
+```
+
+:statue_of_liberty: **Democracy: **
+```css
+- Capability to declare wars by vote only.
+- Maximum Manpower: 25%.
+- Maximum Tax Rate: 70%.
+- Civilian Actions: 50%.
+- Becomes fascism when overthrown.
+```
+
+:fist_tone1: **Fascism: **
+```css
+- Capability to declare wars: Yes.
+- Maximum Manpower: 10%.
+- Maximum Tax Rate: 70%.
+- Civilian Actions: 20%.
+- Becomes communism when overthrown.
+```

@@ -1,0 +1,28 @@
+:guard: **Ground Infantry:** (x50.000)
+------------------
+
+**arquebusiers** - 1 Iron, 1 Lead, 1 Food, 50.000 Manpower ¦ Ground Unit ¦ `1 AP - 1 DP` ¦ Starting Unit
+**musketmen** - 2 Iron, 3 Lead, 1 Food, 50.000 Manpower ¦ Ground Unit ¦ `2 AP - 2 DP` ¦ (Requires Tech 2)
+**riflemen** - 4 Iron, 4 Lead, 1 Food, 50.000 Manpower ¦ Ground Unit ¦ `5 AP - 5 DP` ¦ (Requires Tech 3)
+**infantry** - 5 Iron, 5 Lead, 1 Food, 50.000 Manpower ¦ Ground Unit ¦ `6 AP - 8 DP` ¦ (Requires Tech 4)
+**modern_infantry** - 7 Iron, 7 Lead, 1 Food, 50.000 Manpower ¦ Ground Unit ¦ `10 AP - 10 DP` ¦ (Requires Tech 5)
+
+:canned_food: **Artillery:** (x500)
+------------------
+
+**bombard** - 2 Iron, 2 Wood, 1 Lead, 20.000 Manpower ¦ Ground Unit ¦ `1.000 AP - 300 DP` ¦ (Requires Tech 1)
+**cannons** - 3 Iron, 2 Wood, 2 Lead, 20.000 Manpower ¦ Ground Unit ¦ `1.000 AP - 300 DP` ¦ (Requires Tech 2)
+**culverins** - 5 Iron, 4 Wood, 5 Lead, 20.000 Manpower ¦ Ground Unit ¦ `1.000 AP - 300 DP` ¦ (Requires Tech 3)
+**field_artillery** - 10 Iron, 5 Lead, 5 Petrol, 20.000 Manpower ¦ Ground Unit ¦ `1.000 AP - 300 DP` ¦ (Requires Tech 4)
+**howitzers** - 15 Iron, 5 Lead, 10 Petrol, 20.000 Manpower ¦ Ground Unit ¦ `1.000 AP - 300 DP` ¦ (Requires Tech 5)
+
+:articulated_lorry: **Land Vehicles:** (x500)
+------------------
+**armoured_cars** - 3 Iron, 3 Lead, 3 Petrol, 25.000 Manpower ¦ Ground Unit ¦ `3.000 AP - 6.000 DP` ¦ (Requires Tech 4)
+**tanks** - 10 Iron, 7 Petrol, 25.000 Manpower ¦ Ground Unit ¦ `10.000 AP - 20.000 DP` ¦ (Requires Tech 5)
+
+:airplane: **Aeroplanes:** (x50)
+------------------
+**biplanes** - 3 Iron, 2 Petrol, 2 Lead, 15.000 Manpower ¦ `2.000 AP - 2.000 DP` ¦ (Requires Tech 4)
+**bombers** - 5 Iron, 4 Petrol, 15.000 Manpower ¦ `5.000 AP - 1.000 DP` ¦ (Requires Tech 4)
+**fighters** - 7 Iron, 7 Petrol, 20.000 Manpower ¦ `1.000 AP - 10.000 DP` ¦ (Requires Tech 5)

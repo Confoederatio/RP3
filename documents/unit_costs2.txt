@@ -1,0 +1,22 @@
+**strategic_bombers** - 10 Petrol, 10 Iron, 20.000 Manpower ¦ `25.000 AP - 5.000 DP` ¦ (Requires Tech 5)
+
+:ship: **Naval Units:** (x10)
+------------------
+**galleons** - 5 Wood, 2 Iron, 2 Food, 10.000 Manpower ¦ `1.000 AP - 1.000 DP` ¦ Starting Unit
+**men_of_war** - 15 Wood, 4 Iron, 2 Food, 20.000 Manpower ¦ `2.500 AP - 2.500 DP` ¦ (Requires Tech 2)
+**ironclads** - 10 Coal, 5 Iron, 2 Food, 30.000 Manpower ¦ `7.000 AP - 5.000 DP` ¦ (Requires Tech 3)
+**dreadnoughts** - 10 Petrol, 15 Iron, 2 Food, 50.000 Manpower ¦ `10.000 AP - 20.000 DP` ¦ (Requires Tech 4)
+**battleships** - 5 Petrol, 15 Iron, 2 Food, 100.000 Manpower ¦ `20.000 AP - 10.000 DP` ¦ (Requires Tech 5)
+
+:man_tone1: **Colonists:** (x1)
+------------------
+**settlers** - 5 Wood, 5 Iron, 3 Food, £2.500, 100.000 Manpower ¦ Colonises 1 Province ¦ Starting Unit
+**colonists** - 7 Wood, 5 Iron, 2 Coal, 3 Food, £5.000, 100.000 Manpower ¦ Colonises 3 Provinces ¦ (Requires Tech 3)
+**administrators** - 10 Wood, 5 Iron, 3 Petrol, 3 Food, £10.000, 50.000 Manpower ¦ Colonises 5 Provinces ¦ (Requires Tech 4)
+
+:test_tube: **Technology:**
+------------------
+**tech2** - 5 Iron, 10 Wood, 5 Lead, £10.000 ¦ Technological Upgrade
+**tech3** - 10 Iron, 10 Coal, 20 Wood, 10 Stone, £20.000 ¦ Technological Upgrade
+**tech4** - 20 Iron, 15 Petrol, 15 Coal, 10 Stone, £35.000 ¦ Technological Upgrade
+**tech5** - 50 Iron, 30 Petrol, 20 Coal, 5 Gold, 20 Stone, £50.000 ¦ Technological Upgrade
